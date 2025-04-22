@@ -85,6 +85,8 @@ public class BasePlayer : MonoBehaviour
 
         // —— 3. 计算当前速度 —— 
         float targetSpeed = inputX * moveSpeed;
+        if (!isGround)
+            targetSpeed *= 1.5f; // 空中加速
         float accel = (Mathf.Abs(inputX) > 0.01f) ? acceleration : deceleration;
         currentVelocityX = Mathf.MoveTowards(
             currentVelocityX,
