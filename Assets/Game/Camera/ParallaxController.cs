@@ -1,42 +1,30 @@
 using UnityEngine;
 
-[ExecuteAlways]
 public class ParallaxController : MonoBehaviour
 {
-    [System.Serializable]
-    public class ParallaxLayer
-    {
-        public Transform layerTransform;      // 背景层的 Transform
-        [Range(0f, 1f)]
-        public float parallaxFactor = 0.5f;   // 0 = 固定不动, 1 = 与摄像机同速
-        private Vector3 initialPosition;      // 初始位置缓存
+    [Tooltip("主相机引用")]
+    public Transform cameraTransform;
+    [Tooltip("视差因子 (0~1)：越小越远，越大越近")]
+    public Vector2 parallaxFactor = new Vector2(0.5f, 0f);
 
-        public void Initialize() => initialPosition = layerTransform.position;
-        public void UpdateParallax(Vector3 deltaCam)
-        {
-            // 根据摄像机的移动量和视差因子计算层的偏移
-            Vector3 newPos = initialPosition + deltaCam * parallaxFactor;
-            layerTransform.position = new Vector3(newPos.x, newPos.y, layerTransform.position.z);
-        }
-    }
-
-    public ParallaxLayer[] layers;     // 在 Inspector 中配置各背景层
-    private Transform camTransform;
     private Vector3 previousCamPos;
 
     void Start()
     {
-        camTransform = Camera.main.transform;
-        previousCamPos = camTransform.position;
-        foreach (var layer in layers)
-            layer.Initialize();
+        if (cameraTransform == null)
+            cameraTransform = Camera.main.transform;
+        previousCamPos = cameraTransform.position;
     }
 
-    void LateUpdate()
+    void Update()
     {
-        Vector3 deltaMovement = camTransform.position - previousCamPos;
-        foreach (var layer in layers)
-            layer.UpdateParallax(deltaMovement);
-        previousCamPos = camTransform.position;
+        Vector3 camPos = cameraTransform.position;
+        Vector3 delta = previousCamPos - camPos;
+
+        // 按比例移动背景
+        Vector3 move = new Vector3(delta.x * parallaxFactor.x, delta.y * parallaxFactor.y, 0f);
+        transform.position += move;
+
+        previousCamPos = camPos;
     }
 }
