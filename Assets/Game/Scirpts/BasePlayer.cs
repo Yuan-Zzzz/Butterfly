@@ -20,9 +20,7 @@ public class BasePlayer : MonoBehaviour
     public float acceleration = 10f;   // 加速度（单位：m/s²）
     public float deceleration = 8f;    // 减速度（单位：m/s²）
 
-    [Header("临时使用")]
-    public SpriteRenderer zhuWang;
-    public GameObject huaYuan;
+
 
     // —— 私有字段 —— 
     private float scaleX;
@@ -104,7 +102,7 @@ public class BasePlayer : MonoBehaviour
             anim.Play("Fanning");
             // 固定高度飞
             transform.DOMoveY(1.6f, 2f);
-            zhuWang.DOFade(0, 2f);
+            //zhuWang.DOFade(0, 2f);
         }
 
         if (Input.GetKey(KeyCode.C))
@@ -114,7 +112,7 @@ public class BasePlayer : MonoBehaviour
 
         if (Input.GetKey(KeyCode.F1))
         {
-            huaYuan.SetActive(true);
+           // huaYuan.SetActive(true);
         }
 
         // —— 6. 空格跳跃 —— 
