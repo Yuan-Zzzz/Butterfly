@@ -5,8 +5,11 @@ using TMPro;
 
 public class InteractionPrompt : MonoBehaviour
 {
+  
     public TextMeshProUGUI promptText; // 提示文本组件
+    [TextArea(3, 10)]
     public string promptMessage = "Press E to interact"; // 提示信息
+    [TextArea(3, 10)]
     public string interactionMessage = "You have interacted!"; // 交互信息
     public float fadeDuration = 0.5f; // 淡入淡出时间
     public bool requiresInput = false; // 是否需要玩家输入
