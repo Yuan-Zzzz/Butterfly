@@ -39,7 +39,7 @@ public class InteractionPrompt : MonoBehaviour
                 ShowText();
             }
         }
-        else if (isPlayerInRange && requiresInput && Input.GetKeyDown(KeyCode.E))
+        else if (isPlayerInRange && requiresInput && Input.GetKeyDown(KeyCode.Z))
         {
             ShowText(interactionMessage);
         }
