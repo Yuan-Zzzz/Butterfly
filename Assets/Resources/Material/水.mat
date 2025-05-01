@@ -202,8 +202,8 @@ Material:
     - _RandomSeed: 0
     - _RectSize: 1
     - _RotateUvAmount: 0
-    - _RoundWaveSpeed: 2.79
-    - _RoundWaveStrength: 0.347
+    - _RoundWaveSpeed: 0.47
+    - _RoundWaveStrength: 0.194
     - _ShadowAlpha: 0.5
     - _ShadowX: 0.1
     - _ShadowY: -0.05
@@ -223,9 +223,9 @@ Material:
     - _WarpScale: 0.5
     - _WarpSpeed: 8
     - _WarpStrength: 0.025
-    - _WaveAmount: 7
-    - _WaveSpeed: 10
-    - _WaveStrength: 7.5
+    - _WaveAmount: 3.8
+    - _WaveSpeed: 0
+    - _WaveStrength: 1.4
     - _WaveX: 1
     - _WaveY: 0
     - _ZTestMode: 4
