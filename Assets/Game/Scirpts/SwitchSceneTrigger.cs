@@ -12,6 +12,10 @@ public class SwitchSceneTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             GameArchitecture.Interface.GetSystem<ISwitchSceneSystem>().SwitchSceneAsync(SceneName);
+            if(AudioManager.Instance!=null)
+            {
+                AudioManager.Instance.MuteTransition(1.5f,1.5f);
+            }
         }
     }
 }
