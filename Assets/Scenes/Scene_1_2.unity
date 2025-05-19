@@ -353,13 +353,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 111367637}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: -0.5493747, y: 0.44518247, z: -0.44518247, w: 0.5493747}
   m_LocalPosition: {x: 0.06, y: -0.37, z: -0.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 850305487}
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -11.961, y: 90, z: -90}
 --- !u!199 &111367639
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -10473,13 +10473,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 149730597}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: -0.5531704, y: 0.44045717, z: -0.44045717, w: 0.5531704}
   m_LocalPosition: {x: 0.06, y: -0.37, z: -0.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 658780241}
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -12.944, y: 90, z: -90}
 --- !u!1 &176299590
 GameObject:
   m_ObjectHideFlags: 0
@@ -25261,7 +25261,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u6211\u53EA\u77E5\u9053"
+  m_text: "\u6211\u53EA\u77E5\u9053\u6211\u7684\u4E00\u5207\u90FD\u4E0E\u56ED\u5B50\u5171\u751F\u5171\u5B58\u4E86\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3f0d4e31a1c9fe94ea54e7f808086188, type: 2}
   m_sharedMaterial: {fileID: 273417436589230582, guid: 3f0d4e31a1c9fe94ea54e7f808086188, type: 2}
