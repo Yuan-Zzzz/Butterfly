@@ -1,0 +1,10 @@
+ManifestFileVersion: 0
+CRC: 1535481443
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: uifadepanel_prefab
+      Dependencies: {}
+    Info_1:
+      Name: uichessborad_prefab
+      Dependencies: {}
